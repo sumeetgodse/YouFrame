@@ -1,7 +1,8 @@
 # YouFrame
 Full-stack online photo-sharing application
 
-Framework - Flask / Technologies - Python, HTML, CSS
+Framework - Flask
+Technologies - Python, HTML, CSS
 
 The homepage of the website loads a dashboard of all the uploaded photos
 On successful upload, this new photo appears at the 1st tile, shifting all other photos by 1 position
