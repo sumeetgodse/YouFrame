@@ -79,12 +79,14 @@
     <p id="paragraph">Gallery</p>
   </div>
 
-  <!--<form id="form" action="http://localhost:5000/upload" enctype="multipart/form-data" method="POST">
+<!--<form id="form" action="http://localhost:5000/upload" enctype="multipart/form-data" method="POST">
 <input type="file" name="file" id="file" />
 <input type="Submit" value="Upload" />
 </form>-->
 
   <form id="form" action="http://localhost:5000/upload" enctype="multipart/form-data" method="POST">
+
+  <!--            This form will redirect to the route '/upload' after submission               -->  
 
     <label class="custom-file-upload">
       <img src="{{url_for('static', filename='uploader/upload.png')}}" width="18%" height="18%">
@@ -97,8 +99,8 @@
   </form>
   <br><br>
   <div class="rowu">
-    {% for upload in uploads %}
-    {% if ('png' in upload) or ('jpg' in upload) or ('jpeg' in upload) %}
+    {% for upload in uploads %}             <!--          This is the jinja2 tempate for writing any kind of loops or conditionals          -->
+    {% if ('png' in upload) or ('jpg' in upload) or ('jpeg' in upload) %}   <!--          Display only the jpg,png,jpeg file formats          -->
     <div class="columnu">
       <img class="preview-image" src="{{url_for('static', filename=upload)}}" alt="{{upload}}">
       {% print(upload.split("/")[1][:20]) %}
